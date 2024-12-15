@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'login_app/home.css' %}">
+  <title>Home - YOLO Dashboard</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="v7"><button class="mod_btn">YOLO V7</button></div>
+      <div class="v5"><button class="mod_btn">YOLO V5</button></div>
+      <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+      <div class="logout"><button class="logout_btn" type="submit">Logout</button></div>
+      </form>
+    </nav>
+  </header>
+  <div class="vds">
+    <!-- Camera 1 Feed -->
+    <div class="cam">
+      <p>Camera 1 Feed</p>
+      <div class="icon">
+        <video id="video1" controls style="display: none;"></video>
+        <label for="input_video1">
+          <input type="file" accept="video/*" id="input_video1" class="video-input">
+          <img src="{% static 'plus.png' %}" alt="Camera 1" class="plus-icon"/>
+        </label>
+      </div>
+    </div>
+
+    <!-- Camera 2 Feed -->
+    <div class="cam">
+      <p>Camera 2 Feed</p>
+      <div class="icon">
+        <video id="video2" controls style="display: none;"></video>
+        <label for="input_video2">
+          <input type="file" accept="video/*" id="input_video2" class="video-input">
+          <img src="{% static 'plus.png' %}" alt="Camera 2" class="plus-icon"/>
+        </label>
+      </div>
+    </div>
+
+    <!-- Camera 3 Feed -->
+    <div class="cam">
+      <p>Camera 3 Feed</p>
+      <div class="icon">
+        <video id="video3" controls style="display: none;"></video>
+        <label for="input_video3">
+          <input type="file" accept="video/*" id="input_video3" class="video-input">
+          <img src="{% static 'plus.png' %}" alt="Camera 3" class="plus-icon"/>
+        </label>
+      </div>
+    </div>
+
+    <!-- Camera 4 Feed -->
+    <div class="cam">
+      <p>Camera 4 Feed</p>
+      <div class="icon">
+        <video id="video4" controls style="display: none;"></video>
+        <label for="input_video4">
+          <input type="file" accept="video/*" id="input_video4" class="video-input">
+          <img src="{% static 'plus.png' %}" alt="Camera 4" class="plus-icon"/>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <footer></footer>
+  <script src="{% static 'js/tds.js' %}"></script>
+  <script>
+
+  </script>
+</body>
+</html>

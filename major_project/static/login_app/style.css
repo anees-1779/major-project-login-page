@@ -1,0 +1,169 @@
+/* Reset some default margins and paddings */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  
+  color: #333333; /* Dark text for contrast */
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: fixed;
+  width: 100%; /* Full width */
+  height: 100%; /* Cover bottom half of the screen */
+  transform: skewY(-24deg) translateY(50%); /* Skew from bottom */
+  background: linear-gradient(to right, #007BFF, #00FFFF, #87CEFA, #004B87);
+  background-size: 300% 300%; 
+  animation: color 12s ease-in-out infinite;
+  bottom: 0; /* Ensure it stays at the bottom */
+  z-index: -1;
+  overflow: hidden;
+}
+
+
+@keyframes color{
+  0%{
+      background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+}
+
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: xxx-large;
+  font-weight: bolder;
+  animation: fadeIn 1s ease-in-out;
+  color: #2196f3; /* Blue color for contrast */
+  text-shadow: 1px 1px 3px rgba(33, 150, 243, 0.4); /* Subtle shadow effect */
+}
+
+/* Subheading */
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: xxx-large;
+  font-weight: bolder;
+  animation: fadeIn 1s ease-in-out 0.5s;
+  color: #64b5f6; /* Light blue */
+  text-shadow: 1px 1px 4px rgba(100, 181, 246, 0.5); /* Subtle glow */
+}
+
+/* Centering the main container */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  padding: 50px;
+  border: 2px solid #f3f3f3; /* Blue border */
+  border-radius: 15px; /* More rounded corners */
+  background-color:  #f9f9f9; /* White background */
+  box-shadow:0 8px 16px rgb(59 59 59 / 20%), 0 4px 8px rgba(0, 0, 0, 0.1); /* Layered shadows for depth */
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+}
+
+.main:hover {
+  box-shadow: 0 12px 24px rgba(100, 181, 246, 0.3), 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced glow on hover */
+}
+
+/* Styling user ID and password fields */
+.user-id, .passw {
+  margin: 15px 0;
+  width: 100%;
+}
+
+/* Input fields */
+input[type="number"], input[type="password"] {
+  width: 93%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  margin-top: 17px;
+  font-size: 16px;
+  outline: none;
+  background-color: #ffffff; /* White input background */
+  color: #333333; /* Dark text */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="number"]:focus, input[type="password"]:focus {
+  border-color: #64b5f6;
+  box-shadow: 0 0 10px rgba(100, 181, 246, 0.5), inset 0 2px 6px rgba(100, 181, 246, 0.2);
+}
+
+/* Placeholder styling */
+input::placeholder {
+  color: #999999;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+input:focus::placeholder {
+  opacity: 0.5;
+}
+
+
+button {
+  width: 105%;
+  padding: 12px 18px;
+  margin-top: 40px;
+  background-color: #2e91e1; /* Blue background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(100, 181, 246, 0.4), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #42a5f5; /* Slightly darker blue on hover */
+  box-shadow: 0 8px 16px rgba(66, 165, 245, 0.5), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Styles */
+button:active {
+  background-color: #1e88e5; /* Even darker on click */
+}
+
+/* Form focus glow */
+.main:focus-within {
+  border-color: #2196f3;
+  box-shadow: 0 0 15px rgba(33, 150, 243, 0.5);
+}

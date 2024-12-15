@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'login_app/style.css' %}">
+  <title>Traffic Management System</title>
+</head>
+<body>
+  <header>Traffic Management</header>
+  <div class="head">System</div>
+
+  <div class="main">
+    
+    <form method="POST" action="{% url 'submit' %}">
+      {% csrf_token %}
+      <div class="user-id" >
+        <input type="number" name="user_id" placeholder="Enter User ID" required>
+      </div>
+      <div class="passw">
+        <input type="password" name="password" placeholder="Enter Password" required>
+      </div>
+      <div class="btn">
+        <button type="submit">Submit</button>
+      </div>
+      <!-- In index.html -->
+{% if messages %}
+<ul>
+    {% for message in messages %}
+        <li style="color: red;
+        font-size: large" class="msg">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+    </form>
+  </div>
+<footer></footer>
+
+</body>
+</html>

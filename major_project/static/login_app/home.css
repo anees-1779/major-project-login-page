@@ -1,0 +1,162 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+header{
+  position: relative;
+  background: #FAFAFA;
+ 
+}
+
+/* Navigation Bar */
+nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Center all nav elements */
+  padding: 20px 0 15px 0;
+  gap: 20px; /* Space between nav items */
+  border-bottom: 1px #F3F6F9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+.logout {
+  position: relative;
+  display: flex;
+  right: -390%;
+}
+
+.logout_btn {
+  border: none;
+  background: linear-gradient(to right, #B71C1C, #D32F2F); /* Darker red gradient background */
+  color: white; /* White text for contrast */
+  font-size: large;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(183, 28, 28, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-position 0.5s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.logout_btn:hover {
+  background-position: 100% 50%; /* Shift gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge button */
+  box-shadow: 0 6px 12px rgba(183, 28, 28, 0.3), 0 3px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.mod_btn {
+  border: none;
+  background: linear-gradient(to left,#004B87, #5bbbbb, #007BFF); /* Vibrant gradient */
+  background-size: 300% 300%; 
+  font-size: x-large;
+  color: white; /* White text for contrast */
+  padding: 12px 24px; /* Add padding for a larger button */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  font-weight: bold; /* Make text stand out */
+  text-transform: uppercase; /* Uniform uppercase text for a professional appearance */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-position 0.5s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+}
+
+.mod_btn:hover {
+  cursor: pointer;
+  background-position: 100% 50%; /* Shift gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge button */
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3), 0 3px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  color: #f0faff; /* Lighter text color on hover for extra vibrancy */
+}
+
+
+.v5 {
+  border-left: 1px solid black;
+  padding-left: 20px; /* Space after the border for text readability */
+}
+
+.v7 {
+  padding-right: 20px; /* Space before the border for balance */
+}
+
+
+.vds{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+
+}
+
+
+
+p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cam{
+  border: 2px solid #f3f3f3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-left: 8px;
+  box-shadow:0 8px 16px rgb(59 59 59 / 20%), 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FAFAFA;
+  z-index: 1;
+}
+
+input{
+  display: none;
+}
+
+input:hover{
+  cursor: pointer;
+}
+
+.plus-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.plus-icon:hover{
+  cursor: pointer;
+  box-shadow:0 8px 16px rgb(59 59 59 / 20%), 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+
+.icon video {
+  width: 100%; /* Make the video take up the full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for a clean look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.cam:hover {
+  box-shadow: 0 12px 24px rgba(100, 181, 246, 0.3), 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced glow on hover */
+}
+
+img{
+  padding: 0px 130px 0px 130px;
+  padding-bottom: 140%;
+}
+
+footer {
+  position: fixed;
+  width: 100%; /* Full width */
+  height: 100%; /* Cover bottom half of the screen */
+  transform: skewY(-24deg) translateY(50%); /* Skew from bottom */
+  background: linear-gradient(to left, #007BFF, #00FFFF, #87CEFA, #004B87);
+  background-size: 300% 300%; 
+  animation: color 12s ease-in-out infinite;
+  bottom: 0; /* Ensure it stays at the bottom */
+  z-index: -1;
+  overflow: hidden;
+}
+
