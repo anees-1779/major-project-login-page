@@ -89,8 +89,17 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 30px;
 
+}
+
+.vds1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 
@@ -101,7 +110,9 @@ p{
   align-items: center;
 }
 .cam{
+  display: flex;
   border: 2px solid #f3f3f3;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
@@ -109,6 +120,8 @@ p{
   box-shadow:0 8px 16px rgb(59 59 59 / 20%), 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #FAFAFA;
   z-index: 1;
+  height:39vh;
+  width: 33%;
 }
 
 input{
@@ -117,6 +130,10 @@ input{
 
 input:hover{
   cursor: pointer;
+}
+
+.icon{
+  height: 100px;
 }
 
 .plus-icon {
@@ -131,7 +148,7 @@ input:hover{
 }
 
 
-.icon video {
+.cam video {
   width: 100%; /* Make the video take up the full width of the container */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Rounded corners for a clean look */
@@ -140,11 +157,6 @@ input:hover{
 
 .cam:hover {
   box-shadow: 0 12px 24px rgba(100, 181, 246, 0.3), 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced glow on hover */
-}
-
-img{
-  padding: 0px 130px 0px 130px;
-  padding-bottom: 140%;
 }
 
 footer {

@@ -21,53 +21,70 @@
   <div class="vds">
     <!-- Camera 1 Feed -->
     <div class="cam">
-      <p>Camera 1 Feed</p>
+      <video id="video1" controls style="display: none;"></video>
+      <div id="rmvText1"><p>Camera 1 Feed</p></div>
       <div class="icon">
-        <video id="video1" controls style="display: none;"></video>
+        
         <label for="input_video1">
-          <input type="file" accept="video/*" id="input_video1" class="video-input">
-          <img src="{% static 'plus.png' %}" alt="Camera 1" class="plus-icon"/>
-        </label>
-      </div>
-    </div>
-
-    <!-- Camera 2 Feed -->
-    <div class="cam">
-      <p>Camera 2 Feed</p>
-      <div class="icon">
-        <video id="video2" controls style="display: none;"></video>
-        <label for="input_video2">
-          <input type="file" accept="video/*" id="input_video2" class="video-input">
+          <input type="file" accept="video/*" id="input_video1" class="video-input" onclick = "removeBg(1)">
+        <div id="rmvIcon1">
           <img src="{% static 'plus.png' %}" alt="Camera 2" class="plus-icon"/>
-        </label>
+          </div>
+          </label>
+        </div>
+      </div>
+      
+    <!-- Camera 2 Feed -->
+      <div class="cam">
+        <video id="video2" controls style="display: none;"></video>
+        <div id="rmvText2"><p>Camera 2 Feed</p></div>
+        <div class="icon">
+          
+          <label for="input_video2">
+            <input type="file" accept="video/*" id="input_video2" class="video-input" onclick = "removeBg(2)">
+            <div id="rmvIcon2">
+            <img src="{% static 'plus.png' %}" alt="Camera 2" class="plus-icon"/>
+            </div>
+            </label>
+          </div>
+        </div>
       </div>
     </div>
 
+ <div  class="vds1">
     <!-- Camera 3 Feed -->
     <div class="cam">
+     <video id="video3" controls style="display: none;"></video>
+    <div id="rmvText3">
       <p>Camera 3 Feed</p>
+      </div>
       <div class="icon">
-        <video id="video3" controls style="display: none;"></video>
         <label for="input_video3">
-          <input type="file" accept="video/*" id="input_video3" class="video-input">
+          <input type="file" accept="video/*" id="input_video3" class="video-input" onclick = "removeBg(3)">
+          <div id="rmvIcon3">
           <img src="{% static 'plus.png' %}" alt="Camera 3" class="plus-icon"/>
+          </div>
         </label>
       </div>
     </div>
 
     <!-- Camera 4 Feed -->
     <div class="cam">
-      <p>Camera 4 Feed</p>
+      <video id="video4" controls style="display: none;"></video>
+      <div id="rmvText4"><p>Camera 4 Feed</p></div>
       <div class="icon">
-        <video id="video4" controls style="display: none;"></video>
+        
         <label for="input_video4">
-          <input type="file" accept="video/*" id="input_video4" class="video-input">
-          <img src="{% static 'plus.png' %}" alt="Camera 4" class="plus-icon"/>
-        </label>
+          <input type="file" accept="video/*" id="input_video4" class="video-input" onclick = "removeBg(4)">
+          <div id="rmvIcon4">
+            <img src="{% static 'plus.png' %}" alt="Camera 2" class="plus-icon"/>
+          </div>
+          </label>
+        </div>
       </div>
     </div>
   </div>
-
+</div>
   <footer></footer>
   <script src="{% static 'js/tds.js' %}"></script>
   <script>
